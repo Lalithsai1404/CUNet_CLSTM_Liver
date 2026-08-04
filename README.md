@@ -1,25 +1,40 @@
 # CUNet + CLSTM Based Liver Tumor Detection in CT Scans
 
-## Overview
-
-This project presents a deep learning-based approach for automatic liver tumor detection and segmentation from CT scan images. The system combines **CUNet** and **CLSTM (Convolutional Long Short-Term Memory)** to improve segmentation accuracy by capturing both spatial and contextual features.
-
-The application processes CT scans in **NIfTI (.nii)** format and generates segmentation masks highlighting liver and tumor regions. An interactive **Streamlit** web application is provided for easy prediction and visualization.
+A deep learning-based medical image segmentation system that automatically detects and segments liver tumors from CT scan images using a hybrid **CUNet + CLSTM** architecture.
 
 ---
 
-## Features
+## 🚀 Live Demo
+
+**Streamlit Application:**  
+https://cunetclstmliver-9twjsrhhwitbziq6ihrezu.streamlit.app/
+
+> **Note:** The application is hosted on Streamlit Community Cloud. If the app is inactive, it may take a few seconds to wake up before loading.
+
+---
+
+## 📖 Overview
+
+This project aims to automatically detect and segment liver tumors from CT scan images using deep learning. Early and accurate liver tumor detection plays a crucial role in supporting medical diagnosis and treatment planning.
+
+The system uses the **LiTS (Liver Tumor Segmentation)** dataset, which contains abdominal CT scans and corresponding segmentation masks in **`.nii` (NIfTI)** format. The application directly accepts `.nii` files as input and performs preprocessing before passing them to a hybrid **CUNet + CLSTM** model for segmentation.
+
+The segmented output highlights the liver and tumor regions, providing an efficient and user-friendly solution for medical image analysis through an interactive Streamlit web application.
+
+---
+
+## ✨ Features
 
 - Automatic liver and tumor segmentation
 - Supports CT scans in `.nii` format
 - Hybrid CUNet + CLSTM architecture
-- Interactive Streamlit web interface
+- Interactive Streamlit web application
 - Real-time prediction and visualization
 - Medical image preprocessing pipeline
 
 ---
 
-## Dataset
+## 📂 Dataset
 
 This project uses the **LiTS (Liver Tumor Segmentation)** dataset.
 
@@ -27,11 +42,11 @@ This project uses the **LiTS (Liver Tumor Segmentation)** dataset.
 - Image Type: Abdominal CT Scans
 - Ground Truth: Liver and Tumor Segmentation Masks
 
-> **Note:** The dataset is not included in this repository due to its size and licensing restrictions.
+> **Note:** The dataset is not included in this repository due to licensing restrictions and file size limitations.
 
 ---
 
-## Technology Stack
+## 🛠 Tech Stack
 
 - Python
 - TensorFlow
@@ -47,9 +62,11 @@ This project uses the **LiTS (Liver Tumor Segmentation)** dataset.
 
 ---
 
-## Project Structure
+## 🏗 Project Structure
 
-```
+```text
+CUNet-CLSTM-Liver-Tumor-Detection/
+│
 ├── dataset/
 ├── models/
 ├── preprocessing/
@@ -63,18 +80,18 @@ This project uses the **LiTS (Liver Tumor Segmentation)** dataset.
 
 ---
 
-## Workflow
+## 🔄 Workflow
 
 1. Upload a CT scan in `.nii` format.
 2. The image is preprocessed.
 3. The trained CUNet + CLSTM model is loaded.
 4. Liver and tumor segmentation is performed.
 5. A prediction mask is generated.
-6. Results are displayed through the Streamlit interface.
+6. The segmentation result is displayed through the Streamlit interface.
 
 ---
 
-## Installation
+## ⚙️ Installation
 
 ### Clone the Repository
 
@@ -97,49 +114,44 @@ streamlit run app.py
 
 ---
 
-## Model
+## 🧠 Model Architecture
 
-The proposed hybrid architecture consists of:
+The proposed hybrid architecture combines:
 
-- **CUNet** for feature extraction and segmentation.
-- **CLSTM** for enhancing contextual and spatial feature learning.
+- **CUNet** – Performs feature extraction and semantic segmentation using an encoder-decoder architecture.
+- **CLSTM (Convolutional Long Short-Term Memory)** – Enhances contextual and spatial feature learning, improving tumor boundary segmentation.
 
-The trained model generates accurate liver and tumor segmentation masks from CT scan images.
+Together, these components provide accurate liver and tumor segmentation from CT scan images.
 
 ---
 
-## Evaluation Metrics
+## 📊 Evaluation Metrics
 
 The model performance is evaluated using:
 
 - Dice Coefficient
 - Intersection over Union (IoU)
 
----
-
-## Results
-
-The application successfully segments liver tumors from CT scans and provides clear prediction masks through an interactive web interface.
+These metrics measure the overlap between the predicted segmentation mask and the ground truth.
 
 ---
 
-## Future Enhancements
+## 🚀 Future Enhancements
 
 - Improve segmentation accuracy with larger datasets.
-- Support additional medical imaging formats.
+- Add support for additional medical imaging formats.
 - Deploy using Docker and Kubernetes.
 - Integrate cloud-based prediction services.
 - Add Grad-CAM visualization for model interpretability.
 
 ---
 
-## Contributors
+## 👨‍💻 Contributor
 
 - Lalith Sai Muriki
-- Team Members
 
 ---
 
-## License
+## 📄 License
 
-This project is developed for academic and educational purposes.
+This project was developed for academic and educational purposes.
